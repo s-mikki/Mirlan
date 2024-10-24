@@ -22,6 +22,18 @@
   margin: 0 auto;
   color: #000;
   padding: 50px;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: 100%;
+  align-self: start;
+  width: 100%;
+  align-items: center;
 }
 
 .box {
@@ -43,6 +55,7 @@
   background: #E9F0F4;
   box-shadow: 0 20px 50px 0 rgba(0, 0, 0, 0.10);
   padding: 20px;
+  width: 100%;
 }
 
 .percent__block {
