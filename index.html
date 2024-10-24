@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<div class="body__container">
+    <div class="percent">
+        <div class="percent__block">
+            <p>what is</p>
+            <input class="percent__input" type="text" id="divisionInp" >%
+            <p>of</p>
+            <input class="percent__input" type="text" id="divisionInp2">?
+        </div>
+        <button class="percent__button" onclick="division()">calculate</button>
+        <p class="percent__result" id="divisionResult"></p>
+    </div>
+    <div class="percent">
+        <div class="percent__block">
+            <input class="percent__input" type="text" id="division2Inp">
+            <p>is what Percent of</p>
+            <input class="percent__input" type="text" id="division2Inp2">?
+        </div>
+        <button class="percent__button" onclick="division2()">calculate</button>
+        <p class="percent__result" id="divisionResult2"></p>
+    </div>
+    <button onclick="minus()">-</button>
+    <button onclick="multiplication()">*</button>
+    <p id="p1"></p>
+    <div id="box">  <button onclick="clickButton()">Кликни и появится футер</button></div>
+</div>
+
+</body>
+</html>
+<script src="./index.js"></script>

@@ -1,0 +1,73 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.body {
+
+}
+
+.body__container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #000;
+  padding: 50px;
+}
+
+.box {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  padding: 10px;
+  background-color: chartreuse;
+}
+
+.percent {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 600px;
+  align-items: center;
+}
+
+.percent__block {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.percent__input {
+  height: 20px;
+  max-width: 70px;
+}
+
+.percent__button {
+  display: flex;
+  align-items: center;
+  max-width: 100px;
+  justify-content: center;
+  width: 100%;
+}
+
+.percent__result {
+  display: flex;
+  max-width: 200px;
+  background-color: darkgray;
+  border: 1px solid gray;
+  height: 25px;
+  color: black;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
