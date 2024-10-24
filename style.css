@@ -39,6 +39,10 @@
   gap: 30px;
   max-width: 600px;
   align-items: center;
+  border-radius: 20px;
+  background: #E9F0F4;
+  box-shadow: 0 20px 50px 0 rgba(0, 0, 0, 0.10);
+  padding: 20px;
 }
 
 .percent__block {

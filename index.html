@@ -27,12 +27,26 @@
         <button class="percent__button" onclick="division2()">calculate</button>
         <p class="percent__result" id="divisionResult2"></p>
     </div>
-    <button onclick="minus()">-</button>
-    <button onclick="multiplication()">*</button>
-    <p id="p1"></p>
-    <div id="box">  <button onclick="clickButton()">Кликни и появится футер</button></div>
+    <div class="percent">
+        <div class="percent__block">
+            <input class="percent__input" type="text" id="minusInp">
+            <p>Minus</p>
+            <input class="percent__input" type="text" id="minusInp2">?
+        </div>
+        <button class="percent__button" onclick="minus()">calculate</button>
+        <p class="percent__result" id="minusResult"></p>
+    </div>
+    <div class="percent">
+        <div class="percent__block">
+            <input class="percent__input" type="text" id="multiplicationInp">
+            <p>Multiply</p>
+            <input class="percent__input" type="text" id="multiplicationInp2">?
+        </div>
+        <button class="percent__button" onclick="multiplication()">calculate*</button>
+        <p class="percent__result" id="multiplicationResult"></p>
+    </div>
+    <div id="box"><button onclick="clickButton()">Кликни и появится футер</button></div>
 </div>
-
 </body>
 </html>
 <script src="./index.js"></script>
