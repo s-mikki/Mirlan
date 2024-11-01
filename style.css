@@ -9,8 +9,6 @@
   padding: 0;
 }
 
-.body {}
-
 .body__container {
   display: flex;
   flex-direction: column;
@@ -59,7 +57,7 @@
   max-width: 600px;
   align-items: center;
   border-radius: 20px;
-  background: #E9F0F4;
+  background-color: #E9F0F4;
   box-shadow: 0 20px 50px 0 rgba(0, 0, 0, 0.10);
   padding: 20px;
   width: 100%;
@@ -213,4 +211,47 @@
   width: 70px;
   align-items: center;
   justify-content: center;
+}
+
+.area {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  color: #000;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.area__label {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.area__text {
+  font-size: 20px;
+}
+
+.area__input {
+}
+
+.area__select {
+}
+
+.area__option {
+}
+
+.area__score {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.area__price {
+  font-size: 16px;
+}
+
+.area__info {
+  font-size: 12px;
 }

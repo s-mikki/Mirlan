@@ -84,11 +84,11 @@
             <div class="count__container">
                 <div class="count__content">
                     <p class="count__title">Shopping card:</p>
-                    <p class="count__number" id="countBox"></p>
+                    <p class="count__number" id="countBox">0</p>
                 </div>
                 <div class="count__content">
                     <p class="count__title">Total:</p>
-                    <p class="count__number" id="sumBox"></p>
+                    <p class="count__number" id="sumBox">0</p>
                 </div>
             </div>
             <div class="count__block">
@@ -112,6 +112,31 @@
                     <button class="count__button" onclick=countAdd('donut')>add</button>
                 </div>
             </div>
+        </div>
+        <div class="area">
+            <label class="area__label">
+                <span class="area__text">Площадь комнаты:</span>
+                <input type="number" class="area__input" id="areaInput" onclick=areaScore()>
+                <span class="area__text">М^2</span>
+            </label>
+            <label class="area__label">
+                <span class="area__text">Желаемый тип пола:</span>
+                <select class="area__select" id="areaSelect" onclick=areaScore()>
+                    <option class="area__option" value="">---</option>
+                    <option class="area__option" value="oak">Дуб</option>
+                    <option class="area__option" value="pine">Сосна</option>
+                    <option class="area__option" value="cherry">Вишня</option>
+                    <option class="area__option" value="birch">Береза</option>
+                </select>
+            </label>
+            <div class="area__label">
+                <p class="area__text">Цена:</p>
+                <div class="area__score">
+                    <p class="area__price" id="areaScore"></p>
+                    <p class="area__price">рублей</p>
+                </div>
+            </div>
+            <p class="area__info">Не является публичной афертой</p>
         </div>
     </main>
     <footer class="footer">
