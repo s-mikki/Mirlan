@@ -127,3 +127,9 @@ function areaScore () {
         document.getElementById('areaScore').innerHTML = 300 * val
     }
 }
+
+function infoNames() {
+    const name = (document.getElementById('infoName').value);
+    const age = (document.getElementById('infoAge').value);
+    document.getElementById('infoResultName').innerHTML = name + ': ' + age
+}
