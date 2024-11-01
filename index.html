@@ -8,7 +8,9 @@
 </head>
 <body class="body">
 <div class="body__container">
-    <div class="percent">
+    <header class="header"></header>
+    <main class="main">
+        <div class="percent">
         <div class="percent__block">
             <p>what is</p>
             <input class="percent__input" type="text" id="divisionInp" >%
@@ -17,35 +19,105 @@
         </div>
         <button class="percent__button" onclick="division()">calculate</button>
         <p class="percent__result" id="divisionResult"></p>
-    </div>
-    <div class="percent">
-        <div class="percent__block">
-            <input class="percent__input" type="text" id="division2Inp">
-            <p>is what Percent of</p>
-            <input class="percent__input" type="text" id="division2Inp2">?
         </div>
-        <button class="percent__button" onclick="division2()">calculate</button>
-        <p class="percent__result" id="divisionResult2"></p>
-    </div>
-    <div class="percent">
-        <div class="percent__block">
-            <input class="percent__input" type="text" id="minusInp">
-            <p>Minus</p>
-            <input class="percent__input" type="text" id="minusInp2">?
+        <div class="percent">
+            <div class="percent__block">
+                <input class="percent__input" type="text" id="division2Inp">
+                <p>is what Percent of</p>
+                <input class="percent__input" type="text" id="division2Inp2">?
+            </div>
+            <button class="percent__button" onclick="division2()">calculate</button>
+            <p class="percent__result" id="divisionResult2"></p>
         </div>
-        <button class="percent__button" onclick="minus()">calculate</button>
-        <p class="percent__result" id="minusResult"></p>
-    </div>
-    <div class="percent">
-        <div class="percent__block">
-            <input class="percent__input" type="text" id="multiplicationInp">
-            <p>Multiply</p>
-            <input class="percent__input" type="text" id="multiplicationInp2">?
+        <div class="percent">
+            <div class="percent__block">
+                <input class="percent__input" type="text" id="minusInp">
+                <p>Minus</p>
+                <input class="percent__input" type="text" id="minusInp2">?
+            </div>
+            <button class="percent__button" onclick="minus()">calculate</button>
+            <p class="percent__result" id="minusResult"></p>
         </div>
-        <button class="percent__button" onclick="multiplication()">calculate*</button>
-        <p class="percent__result" id="multiplicationResult"></p>
-    </div>
-    <div id="box"><button onclick="clickButton()">Кликни и появится футер</button></div>
+        <div class="percent">
+            <div class="percent__block">
+                <input class="percent__input" type="text" id="multiplicationInp">
+                <p>Multiply</p>
+                <input class="percent__input" type="text" id="multiplicationInp2">?
+            </div>
+            <button class="percent__button" onclick="multiplication()">calculate*</button>
+            <p class="percent__result" id="multiplicationResult"></p>
+        </div>
+        <div class="meter">
+            <div class="meter__container">
+                <input type="text" class="meter__input" id="meter">
+                <button class="meter__button" onclick="meter()">Метр</button>
+            </div>
+            <div class="meter__container">
+                <input type="text" class="meter__input" id="fud">
+                <button class="meter__button" onclick="fud()">Фуд</button>
+            </div>
+            <div class="meter__container">
+                <input type="text" class="meter__input" id="yard">
+                <button class="meter__button" onclick="yard()">Ярд</button>
+            </div>
+        </div>
+        <div class="convert">
+            <div class="convert__container">
+              <div class="convert__block">
+                <input type="text" class="convert__input" id="tempInput">
+                <select class="convert__select" name="" id="select">
+                    <option value="C">C</option>
+                    <option value="F">F</option>
+                    <option value="K">K</option>
+                </select>
+            </div>
+            <select class="convert__select" name="" id="select2">
+                <option value="C">C</option>
+                <option value="F">F</option>
+                <option value="K">K</option>
+            </select>
+            <button class="convert__button" onclick=convertTemp()>Конвертировать</button>
+            </div>
+            <p class="convert__text" id="tempResult"></p>
+        </div>
+        <div class="count">
+            <div class="count__container">
+                <div class="count__content">
+                    <p class="count__title">Shopping card:</p>
+                    <p class="count__number" id="countBox"></p>
+                </div>
+                <div class="count__content">
+                    <p class="count__title">Total:</p>
+                    <p class="count__number" id="sumBox"></p>
+                </div>
+            </div>
+            <div class="count__block">
+                <p class="count__text">Cream</p>
+                <div class="count__buttons">
+                    <button class="count__button" onclick=countRemove('cream')>remove</button>
+                    <button class="count__button" onclick=countAdd('cream')>add</button>
+                </div>
+            </div>
+            <div class="count__block">
+                <p class="count__text">water</p>
+                <div class="count__buttons">
+                    <button class="count__button" onclick=countRemove('water')>remove</button>
+                    <button class="count__button" onclick=countAdd('water')>add</button>
+                </div>
+            </div>
+            <div class="count__block">
+                <p class="count__text">donut</p>
+                <div class="count__buttons">
+                    <button class="count__button" onclick=countRemove('donut')>remove</button>
+                    <button class="count__button" onclick=countAdd('donut')>add</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <button onclick="clickButton()">Кликни и появится футер</button>
+        <div id="box"></div>
+    </footer>
 </div>
 </body>
 </html>
