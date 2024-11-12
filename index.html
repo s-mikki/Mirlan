@@ -113,6 +113,31 @@
                 </div>
             </div>
         </div>
+        <div class="time">
+            <p class="time__text">Время</p>
+            <p class="time__numbers" id="time"></p>
+        </div>
+        <div class="balance" id="balance">
+            <div class="balance__block">
+                <p class="balance__title" id="balResult"></p>
+            </div>
+            <div class="balance__container">
+                <label class="balance__label">
+                    <input type="number" class="balance__input" id="balanceInput">
+                </label>
+                <button class="balance__button" onclick=balReplenish()>Пополнить</button>
+                <button class="balance__button" onclick=balTakeOff()>Снять</button>
+                <button class="balance__button" onclick=balRemainder()>Баланс</button>
+                <button class="balance__button" onclick=balExit()>Выход</button>
+            </div>
+        </div>
+        <div class="world" id="worldBlock">
+            <img class="world__img" src="img/img-1.jpg" alt="Мир">
+            <div class="world__texts">
+                <p class="world__text">Привет</p>
+                <p class="world__text">Мир!</p>
+            </div>
+        </div>
     </main>
     <footer class="footer">
         <button onclick="clickButton()">Кликни и появится футер</button>

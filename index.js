@@ -49,64 +49,127 @@ function yard() {
     document.getElementById('meter').value = yard1 / 0.9361
 }
 
-function convertTemp () {
+function convertTemp() {
     let val = parseFloat(document.getElementById('tempInput').value);
     let temp = document.getElementById('select').value;
     let temp2 = document.getElementById('select2').value;
-    if(temp == 'C' && temp2 == 'F') {
-        document.getElementById('tempResult').innerHTML = (val * 9/5) + 32
+    if (temp === 'C' && temp2 === 'F') {
+        document.getElementById('tempResult').innerHTML = (val*9/5)+32
     }
-    if(temp == 'F' && temp2 == 'C') {
-        document.getElementById('tempResult').innerHTML = (val - 32) * 5/9
+    if (temp === 'F' && temp2 === 'C') {
+        document.getElementById('tempResult').innerHTML = (val - 32) * 5 / 9
     }
-    if(temp == 'K' && temp2 == 'C') {
+    if (temp === 'K' && temp2 === 'C') {
         document.getElementById('tempResult').innerHTML = val - 273.15
     }
-    if(temp == 'C' && temp2 == 'K') {
+    if (temp === 'C' && temp2 === 'K') {
         document.getElementById('tempResult').innerHTML = val + 273.15
     }
-    if(temp == 'K' && temp2 == 'F') {
-        document.getElementById('tempResult').innerHTML = (val - 273.15) * 9/5 + 32
+    if (temp === 'K' && temp2 === 'F') {
+        document.getElementById('tempResult').innerHTML = (val - 273.15) * 9 / 5 + 32
     }
-    if(temp == 'F' && temp2 == 'K') {
-        document.getElementById('tempResult').innerHTML = 5/9 * (val - 32) + 273.15
+    if (temp === 'F' && temp2 === 'K') {
+        document.getElementById('tempResult').innerHTML = 5 / 9 * (val - 32) + 273.15
     }
 }
 
 let creamItem = 0;
 let creamSum = 0;
-function countAdd (type) {
-    if(type == 'cream') {
+
+function countAdd(type) {
+    if (type === 'cream') {
         creamSum = creamSum + 7
         document.getElementById('sumBox').innerHTML = creamSum
         document.getElementById('countBox').innerHTML = ++creamItem
     }
-    if(type == 'water') {
+    if (type === 'water') {
         creamSum = creamSum + 10
         document.getElementById('sumBox').innerHTML = creamSum
         document.getElementById('countBox').innerHTML = ++creamItem
     }
-    if(type == 'donut') {
+    if (type === 'donut') {
         creamSum = creamSum + 5
         document.getElementById('sumBox').innerHTML = creamSum
         document.getElementById('countBox').innerHTML = ++creamItem
     }
 }
 
-function countRemove (type) {
-    if(type == 'cream') {
+function countRemove(type) {
+    if (type === 'cream') {
         creamSum = creamSum - 7
         document.getElementById('sumBox').innerHTML = creamSum
         document.getElementById('countBox').innerHTML = --creamItem
     }
-    if(type == 'water') {
+    if (type === 'water') {
         creamSum = creamSum - 10
         document.getElementById('sumBox').innerHTML = creamSum
         document.getElementById('countBox').innerHTML = --creamItem
     }
-    if(type == 'donut') {
+    if (type === 'donut') {
         creamSum = creamSum - 5
         document.getElementById('sumBox').innerHTML = creamSum
         document.getElementById('countBox').innerHTML = --creamItem
     }
 }
+
+
+// !== это сравнение чтобы было не равно
+// == это сравнение чтобы было равно
+// = присвоение
+// === Сравнение с типом данных
+
+function time() {
+    var hours = new Date().getHours();
+    var min = new Date().getMinutes();
+    var sec = new Date().getSeconds();
+
+    if (min < 10 && sec < 10) {
+        document.getElementById('time').innerHTML = hours + ":0" + min + ":0" + sec;
+    } else if (min < 10) {
+        document.getElementById('time').innerHTML = hours + ":0" + min + ":" + sec;
+    } else if (sec < 10) {
+        document.getElementById('time').innerHTML = hours + ":" + min + ":0" + sec;
+    } else {
+        document.getElementById('time').innerHTML = hours + ":" + min + ":" + sec;
+    }
+}
+
+setInterval(time, 1000); //2s = 2000
+
+function date () {
+    var date = new Date().getDate();
+}
+
+let ball = 0
+
+function balReplenish () {
+    let ballInput = parseFloat(document.getElementById('balanceInput').value);
+    ball += ballInput;
+    document.getElementById('balResult').innerHTML = ball;
+}
+
+function balTakeOff () {
+    let ballInput = parseFloat(document.getElementById('balanceInput').value);
+    if (ball >= ballInput) {
+        ball -= ballInput;
+        document.getElementById('balResult').innerHTML = ball;
+    } else {
+        document.getElementById('balResult').innerHTML = `Баланс не может быть меньше нуля`;
+    }
+}
+
+function balRemainder () {
+    document.getElementById('balResult').innerHTML = ball;
+}
+
+function balExit () {
+    document.getElementById('balResult').innerHTML = `Вы вышли из системы`;
+}
+
+
+setTimeout(); //2s = 2000
+
+function world () {
+    document.getElementById('worldBlock').innerHTML = `<img class="world__img" src="img/img-2.jpg" alt="Мир">`
+}
+setTimeout(world, 5000); //2s = 2000
