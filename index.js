@@ -188,10 +188,18 @@ function balExit () {
     document.getElementById('balResult').innerHTML = `Вы вышли из системы`;
 }
 
-
-setTimeout(); //2s = 2000
-
-function world () {
-    document.getElementById('worldBlock').innerHTML = `<img class="world__img" src="img/img-2.jpg" alt="Мир">`
+function world() {
+    document.getElementById('world').insertAdjacentHTML('beforeend', `<img class="world__img" src="img/img-2.jpg" alt="Мир">`);
 }
-setTimeout(world, 5000); //2s = 2000
+setTimeout(world, 10000);
+
+function hello1() {
+    document.getElementById('helloBlock').insertAdjacentHTML('beforeend', `<p class="world__text">Привет</p>`);
+}
+
+function hello2() {
+    document.getElementById('helloBlock').insertAdjacentHTML('beforeend', `<p class="world__text">Мир</p>`);
+}
+
+setTimeout(hello1, 4000);
+setTimeout(hello2, 8000);
