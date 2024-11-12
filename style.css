@@ -40,6 +40,18 @@
   align-items: center;
   background-color: chartreuse;
   padding: 50px;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: 100%;
+  align-self: start;
+  width: 100%;
+  align-items: center;
 }
 
 .box {
