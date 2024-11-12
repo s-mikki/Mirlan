@@ -53,63 +53,85 @@ function convertTemp() {
     let val = parseFloat(document.getElementById('tempInput').value);
     let temp = document.getElementById('select').value;
     let temp2 = document.getElementById('select2').value;
-    if (temp === 'C' && temp2 === 'F') {
-        document.getElementById('tempResult').innerHTML = (val*9/5)+32
+    if(temp === 'C' && temp2 === 'F') {
+        document.getElementById('tempResult').innerHTML = (val * 9/5) + 32
     }
-    if (temp === 'F' && temp2 === 'C') {
-        document.getElementById('tempResult').innerHTML = (val - 32) * 5 / 9
+    if(temp === 'F' && temp2 === 'C') {
+        document.getElementById('tempResult').innerHTML = (val - 32) * 5/9
     }
-    if (temp === 'K' && temp2 === 'C') {
+    if(temp === 'K' && temp2 === 'C') {
         document.getElementById('tempResult').innerHTML = val - 273.15
     }
-    if (temp === 'C' && temp2 === 'K') {
+    if(temp === 'C' && temp2 === 'K') {
         document.getElementById('tempResult').innerHTML = val + 273.15
     }
-    if (temp === 'K' && temp2 === 'F') {
-        document.getElementById('tempResult').innerHTML = (val - 273.15) * 9 / 5 + 32
+    if(temp === 'K' && temp2 === 'F') {
+        document.getElementById('tempResult').innerHTML = (val - 273.15) * 9/5 + 32
     }
-    if (temp === 'F' && temp2 === 'K') {
-        document.getElementById('tempResult').innerHTML = 5 / 9 * (val - 32) + 273.15
+    if(temp === 'F' && temp2 === 'K') {
+        document.getElementById('tempResult').innerHTML = 5/9 * (val - 32) + 273.15
     }
 }
 
 let creamItem = 0;
 let creamSum = 0;
-
-function countAdd(type) {
-    if (type === 'cream') {
+function countAdd (type) {
+    if(type === 'cream') {
         creamSum = creamSum + 7
         document.getElementById('sumBox').innerHTML = creamSum
         document.getElementById('countBox').innerHTML = ++creamItem
     }
-    if (type === 'water') {
+    if(type === 'water') {
         creamSum = creamSum + 10
         document.getElementById('sumBox').innerHTML = creamSum
         document.getElementById('countBox').innerHTML = ++creamItem
     }
-    if (type === 'donut') {
+    if(type === 'donut') {
         creamSum = creamSum + 5
         document.getElementById('sumBox').innerHTML = creamSum
         document.getElementById('countBox').innerHTML = ++creamItem
     }
 }
 
-function countRemove(type) {
-    if (type === 'cream') {
+function countRemove (type) {
+    if(type === 'cream') {
         creamSum = creamSum - 7
         document.getElementById('sumBox').innerHTML = creamSum
         document.getElementById('countBox').innerHTML = --creamItem
     }
-    if (type === 'water') {
+    if(type === 'water') {
         creamSum = creamSum - 10
         document.getElementById('sumBox').innerHTML = creamSum
         document.getElementById('countBox').innerHTML = --creamItem
     }
-    if (type === 'donut') {
+    if(type === 'donut') {
         creamSum = creamSum - 5
         document.getElementById('sumBox').innerHTML = creamSum
         document.getElementById('countBox').innerHTML = --creamItem
     }
+}
+
+function areaScore () {
+    let val = parseFloat(document.getElementById('areaInput').value);
+    let temp = document.getElementById('areaSelect').value;
+    if(temp === 'oak') {
+        document.getElementById('areaScore').innerHTML = 150 * val
+    }
+    if(temp === 'pine') {
+        document.getElementById('areaScore').innerHTML = 100 * val
+    }
+    if(temp === 'cherry') {
+        document.getElementById('areaScore').innerHTML = 200 * val
+    }
+    if(temp === 'birch') {
+        document.getElementById('areaScore').innerHTML = 300 * val
+    }
+}
+
+function infoNames() {
+    const name = (document.getElementById('infoName').value);
+    const age = (document.getElementById('infoAge').value);
+    document.getElementById('infoResultName').innerHTML = name + ': ' + age
 }
 
 
