@@ -49,7 +49,7 @@ function yard() {
     document.getElementById('meter').value = yard1 / 0.9361
 }
 
-function convertTemp () {
+function convertTemp() {
     let val = parseFloat(document.getElementById('tempInput').value);
     let temp = document.getElementById('select').value;
     let temp2 = document.getElementById('select2').value;
@@ -133,3 +133,73 @@ function infoNames() {
     const age = (document.getElementById('infoAge').value);
     document.getElementById('infoResultName').innerHTML = name + ': ' + age
 }
+
+
+// !== это сравнение чтобы было не равно
+// == это сравнение чтобы было равно
+// = присвоение
+// === Сравнение с типом данных
+
+function time() {
+    var hours = new Date().getHours();
+    var min = new Date().getMinutes();
+    var sec = new Date().getSeconds();
+
+    if (min < 10 && sec < 10) {
+        document.getElementById('time').innerHTML = hours + ":0" + min + ":0" + sec;
+    } else if (min < 10) {
+        document.getElementById('time').innerHTML = hours + ":0" + min + ":" + sec;
+    } else if (sec < 10) {
+        document.getElementById('time').innerHTML = hours + ":" + min + ":0" + sec;
+    } else {
+        document.getElementById('time').innerHTML = hours + ":" + min + ":" + sec;
+    }
+}
+
+setInterval(time, 1000); //2s = 2000
+
+function date () {
+    var date = new Date().getDate();
+}
+
+let ball = 0
+
+function balReplenish () {
+    let ballInput = parseFloat(document.getElementById('balanceInput').value);
+    ball += ballInput;
+    document.getElementById('balResult').innerHTML = ball;
+}
+
+function balTakeOff () {
+    let ballInput = parseFloat(document.getElementById('balanceInput').value);
+    if (ball >= ballInput) {
+        ball -= ballInput;
+        document.getElementById('balResult').innerHTML = ball;
+    } else {
+        document.getElementById('balResult').innerHTML = `Баланс не может быть меньше нуля`;
+    }
+}
+
+function balRemainder () {
+    document.getElementById('balResult').innerHTML = ball;
+}
+
+function balExit () {
+    document.getElementById('balResult').innerHTML = `Вы вышли из системы`;
+}
+
+function world() {
+    document.getElementById('world').insertAdjacentHTML('beforeend', `<img class="world__img" src="img/img-2.jpg" alt="Мир">`);
+}
+setTimeout(world, 10000);
+
+function hello1() {
+    document.getElementById('helloBlock').insertAdjacentHTML('beforeend', `<p class="world__text">Привет</p>`);
+}
+
+function hello2() {
+    document.getElementById('helloBlock').insertAdjacentHTML('beforeend', `<p class="world__text">Мир</p>`);
+}
+
+setTimeout(hello1, 4000);
+setTimeout(hello2, 8000);
