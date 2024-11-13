@@ -189,9 +189,8 @@ function balExit () {
 }
 
 function world() {
-    document.getElementById('world').insertAdjacentHTML('beforeend', `<img class="world__img" src="img/img-2.jpg" alt="Мир">`);
+    document.getElementById('worldImg').src = "img/img-2.jpg";
 }
-setTimeout(world, 10000);
 
 function hello1() {
     document.getElementById('helloBlock').insertAdjacentHTML('beforeend', `<p class="world__text">Привет</p>`);
@@ -201,5 +200,31 @@ function hello2() {
     document.getElementById('helloBlock').insertAdjacentHTML('beforeend', `<p class="world__text">Мир</p>`);
 }
 
+setTimeout(world, 10000);
 setTimeout(hello1, 4000);
 setTimeout(hello2, 8000);
+
+function trafficReset() {
+    document.getElementById('red').style.backgroundColor = '';
+    document.getElementById('yellow').style.backgroundColor = '';
+    document.getElementById('green').style.backgroundColor = '';
+}
+
+function trafficRed() {
+    trafficReset();
+    document.getElementById('red').style.backgroundColor = '#FF0000';
+}
+
+function trafficYellow() {
+    trafficReset();
+    document.getElementById('yellow').style.backgroundColor = '#FFEA00';
+}
+
+function trafficGreen() {
+    trafficReset();
+    document.getElementById('green').style.backgroundColor = '#2AFF00';
+}
+
+setInterval(trafficRed, 1000);
+setInterval(trafficYellow, 2000);
+setInterval(trafficGreen, 3000);
