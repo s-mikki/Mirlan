@@ -357,8 +357,13 @@
 .traffic {
   display: flex;
   gap: 10px;
+  flex-direction: column;
   background-color: black;
   padding: 10px;
+}
+
+.traffic.traffic--row {
+  flex-direction: row;
 }
 
 .traffic__item {
@@ -369,6 +374,11 @@
   height: 50px;
   border-radius: 100%;
   overflow: hidden;
+}
+
+.traffic.traffic--row .traffic__item {
+  width: 20px;
+  height: 20px;
 }
 
 .traffic__container {
