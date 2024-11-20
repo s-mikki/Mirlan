@@ -206,14 +206,14 @@ setTimeout(hello1, 4000);
 setTimeout(hello2, 8000);
 
 function trafficReset() {
-    document.getElementById( 'red').style.backgroundColor = '';
-    document.getElementById( 'yellow').style.backgroundColor = '';
+    document.getElementById('red').style.backgroundColor = '';
+    document.getElementById('yellow').style.backgroundColor = '';
     document.getElementById('green').style.backgroundColor = '';
 }
 
 function trafficReset1() {
-    document.getElementById( 'red1').style.backgroundColor = '';
-    document.getElementById( 'yellow1').style.backgroundColor = '';
+    document.getElementById('red1').style.backgroundColor = '';
+    document.getElementById('yellow1').style.backgroundColor = '';
     document.getElementById('green1').style.backgroundColor = '';
     document.getElementById('white').style.backgroundColor = '';
     document.getElementById('blue').style.backgroundColor = '';
@@ -245,7 +245,6 @@ function traffic() {
 }
 
 setInterval(traffic, 3000);
-
 
 function traffic1() {
     trafficReset1()
@@ -290,3 +289,30 @@ function traffic1() {
 }
 
 setInterval(traffic1, 5000);
+
+function timer() {
+    let timeLeft = 60
+    let timerText = document.getElementById('timerText');
+    let TimeMin = 0;
+    let TimeHour = 0
+
+    let countDown = setInterval(() => {
+        timeLeft--;
+        timerText.innerText = timeLeft;
+        if (timeLeft < 0) {
+            clearInterval(countDown);
+        } else {
+            if (TimeMin < 10 && timeLeft < 10) {
+                document.getElementById('timerText').innerHTML = TimeHour + ":0" + TimeMin + ":0" + timeLeft;
+            } else if (TimeMin < 10) {
+                document.getElementById('timerText').innerHTML = TimeHour + ":0" + TimeMin + ":" + timeLeft;
+            } else if (timeLeft < 10) {
+                document.getElementById('timerText').innerHTML = TimeHour + ":" + TimeMin + ":0" + timeLeft;
+            } else {
+                document.getElementById('timerText').innerHTML = TimeHour + ":" + TimeMin + ":" + timeLeft;
+            }
+        }
+    }, 1000)
+}
+
+timer()

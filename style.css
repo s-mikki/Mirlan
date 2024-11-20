@@ -356,13 +356,20 @@
 
 .traffic {
   display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.traffic__list {
+  display: flex;
   gap: 10px;
   flex-direction: column;
   background-color: black;
   padding: 10px;
 }
 
-.traffic.traffic--row {
+.traffic__list.traffic--row {
   flex-direction: row;
 }
 
@@ -376,7 +383,7 @@
   overflow: hidden;
 }
 
-.traffic.traffic--row .traffic__item {
+.traffic__list.traffic--row .traffic__item {
   width: 20px;
   height: 20px;
 }
