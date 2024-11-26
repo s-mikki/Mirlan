@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../index.css">
+</head>
+<body class="body">
+<div class="body__container">
+    <header class="header"></header>
+    <main class="main">
+        <div class="todo-list">
+            <h2 class="todo-list__title">ToDo APP</h2>
+            <label class="todo-list__label">
+                <input class="todo-list__input" type="text" id="todoListInput">
+            </label>
+            <div class="todo-list__block">
+                <button class="todo-list__button" onclick=todoTasks()>Вывести</button>
+                <ul class="todo-nav">
+                    <li class="todo-nav__item" onclick=todoAll()>all</li>
+                    <li class="todo-nav__item" onclick=todoActive()>active</li>
+                    <li class="todo-nav__item" onclick=todoCompleted()>completed</li>
+                </ul>
+            </div>
+            <ul class="todo-list__list" id="todoListItem">
+            </ul>
+        </div>
+    </main>
+    <footer class="footer">
+        <button onclick="clickButton()">Кликни и появится футер</button>
+        <div id="box"></div>
+    </footer>
+</div>
+</body>
+</html>
+<script src="./index.js"></script>
