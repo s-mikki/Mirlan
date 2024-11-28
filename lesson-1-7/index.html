@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../index.css">
 </head>
 <body class="body">
 <div class="body__container">
@@ -168,7 +169,7 @@
             </div>
         </div>
         <div class="world" id="world">
-            <img class="world__img" src="img/img-1.jpg" id="worldImg" alt="Мир">
+            <img class="world__img" src="../img/img-1.jpg" id="worldImg" alt="Мир">
             <div class="world__texts" id="helloBlock">
             </div>
         </div>
@@ -204,7 +205,15 @@
         </div>
         <div class="timer">
             <p class="timer__title">Таймер</p>
-            <p class="timer__text" id="timerText"></p>
+            <p class="timer__text" id="timerText">00:01:00</p>
+        </div>
+        <div class="todo">
+            <ul class="todo__list" id="todoList">
+            </ul>
+            <label class="todo__label">
+                <input class="todo__input" type="text" id="todoInput">
+                <button class="todo__button" onclick=addTasks()>Add</button>
+            </label>
         </div>
     </main>
     <footer class="footer">

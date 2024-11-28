@@ -315,4 +315,50 @@ function timer() {
     }, 1000)
 }
 
-timer()
+timer();
+
+let items = [];
+let input = document.getElementById('todoInput');
+let amount = 0;
+
+function addTasks() {
+    let inputValue = document.getElementById('todoInput').value;
+    items.push({
+        id: amount,
+        text: inputValue,
+        status: true
+    });
+    amount++;
+    showTasks();
+}
+
+function showTasks() {
+    let text = ''
+    for (let i = 0; i < items.length; i++) {
+        text = text + `
+           <li class="todo__item">
+               <div class="todo__block">
+                   ${items[i].status ? `${items[i].text}` : `<del>${items[i].text}</del>`}
+                   <button class="todo__button" onclick=changeStatus(${i})>вычеркнуть</button>
+                   <button class="todo__button" onclick=deleteStatus(${i})>Удалить</button>
+               </div>
+           </li>
+        `
+    }
+    document.getElementById('todoList').innerHTML = text;
+}
+
+function changeStatus(index) {
+    items[index] = {
+        id:items[index].id,
+        text:items[index].text,
+        status:items[index].status === true ? false : true
+    }
+    showTasks();
+}
+
+function deleteStatus(index) {
+    let deleteItem = items.filter(i => i.id != items[index].id)
+    items = deleteItem
+    showTasks();
+}
