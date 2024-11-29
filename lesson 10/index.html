@@ -11,11 +11,21 @@
 <div class="body__container">
     <header class="header"></header>
     <main class="main">
+      <div class="\">
       <input type="text" id="inputValue" oninput="search();"> <br>
       <select id="select" onchange="selectCountry();">
-        <option value="men">Men</option>
+        
       </select><br>
       <div class="" id="result"></div>
+      </div>
+      <div class="category">
+        <input type="text" id="categoryInput" oninput="categorySearch();"> <br>
+        <select id="categorySelect" onchange="categoryCountry();">
+          <option value="men">Men</option>
+          <option value="women">womens</option>
+        </select><br>
+      <div class="" id="categoryResult"></div>
+      </div>
     </main>
     <footer class="footer">
         <button onclick=clickButton()>Кликни и появится футер</button>
