@@ -50,7 +50,7 @@ function selectCountry () {
     let selectValue = document.getElementById('select').value;
     let data = box.filter((i)=> i.category === selectValue);
     if(data.length > 0) {
-        document.getElementById('result').innerHTML = 
+        document.getElementById('result').innerHTML =
         `
         <p>${data[0].name}</p>
         <p>${data[0].code}</p>
@@ -92,7 +92,7 @@ let categoryBox = [
         name:'Russia',
         code:'+7',
         shortName:'RU',
-        category:'men',
+        category:'women',
         photo:'./img/vote-bg-4.jpg'
     },
     {
@@ -100,37 +100,35 @@ let categoryBox = [
         name:'Pakistan',
         code:'+92',
         shortName:'PK',
-        category:'men',
+        category:'women',
         photo:'./img/vote-bg-5.jpg'
     },
+    {
+        id:6,
+        name:'Pakistan',
+        code:'+92',
+        shortName:'PK',
+        category:'women',
+        photo:'./img/vote-bg-6.jpg'
+    },
 ]
-
-function categorySearch () {
-    let searchValue = document.getElementById('categoryInput').value;
-    let data = categoryBox.filter((i)=> i.name.toLowerCase().includes(searchValue.toLowerCase()));
-    if(data.length > 0){
-        let text = '';
-        for(let i = 0; i<data.length; i++){
-            text += `<option value="${data[i].category}">${data[i].name}</option>`;
-        }
-        document.getElementById('categorySelect').innerHTML = text;
-    }else{
-        document.getElementById('categorySelect').innerHTML = '';
-    }
-}
 
 function categoryCountry () {
     let categoryValue = document.getElementById('categorySelect').value;
     let data = categoryBox.filter((i)=> i.category === categoryValue);
     if(data.length > 0) {
-        document.getElementById('categoryResult').innerHTML =
-        `
-        <p>${data[0].name}</p>
-        <p>${data[0].code}</p>
-        <p>${data[0].shortName}</p>
-        <p>${data[0].category}</p>
-        <img src="${data[0].photo}" width="100" alt="фото">
-        `;
+        let text = '';
+        data.forEach(item => {
+            text = text +
+              `
+                <p>${item.name}</p>
+                <p>${item.code}</p>
+                <p>${item.shortName}</p>
+                <p>${item.category}</p>
+                <img src="${item.photo}" width="100" alt="фото">
+              `
+        })
+        document.getElementById('categoryResult').innerHTML = text;
     }else{
         document.getElementById('categoryResult').innerHTML = '';
     }
