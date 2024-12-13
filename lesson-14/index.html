@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../index.css">
+</head>
+<body class="body">
+<div class="body__container">
+    <header class="header"></header>
+    <main class="main">
+        <div class="age">
+            <h1 class="age__title">Age calculator</h1>
+            <div class="age__wrap">
+                <div class="age__container">
+                    <label class="age__label">
+                        <span class="age__text">Day</span>
+                        <input class="age__input" type="number" id="day">
+                    </label>
+                    <label class="age__label">
+                        <span class="age__text">Month</span>
+                        <input class="age__input" type="number" id="month">
+                    </label>
+                    <label class="age__label">
+                        <span class="age__text">Year</span>
+                        <input class="age__input" type="number" id="age">
+                    </label>
+                </div>
+                <button class="age__button" onclick=getAge()>Get age</button>
+                <div class="age__texts" id="ageResult"></div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <button onclick=clickButton()>Кликни и появится футер</button>
+    </footer>
+</div>
+</body>
+</html>
+<script src="./index.js"></script>
