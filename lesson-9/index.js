@@ -1,4 +1,3 @@
-
 let todoItems = [];
 let todoAmount = 0;
 
@@ -80,7 +79,7 @@ function todoActive () {
 }
 
 function todoCompleted () {
-    let data = todoItems.filter(i => i.status == false);
+    let data = todoItems.filter(i => i.status === false);
     if(data.length > 0){
         let text = ""
         for (let i = 0; i<data.length; i++){
@@ -103,16 +102,3 @@ function todoCompleted () {
         document.getElementById('todoListItem').innerHTML = 'No active'
     }
 }
-
-
-let box = [
-    {
-        id:1,
-        country:'Germany',
-        code:'+49',
-        short_name:'DE'
-    },
-    {
-
-    }
-]

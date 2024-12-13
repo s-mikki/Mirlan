@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../index.css">
+</head>
+<body class="body">
+<div class="body__container">
+    <header class="header"></header>
+    <main class="main">
+        <div class="todo">
+            <h1 class="todo__title">ToDo App</h1>
+            <label class="todo__label">
+                <input class="todo__input" type="text" id="todoInput">
+            </label>
+            <div class="todo__content">
+                <button class="todo__button" onclick=todo()>type filter</button>
+                <ul class="to-do">
+                    <li class="to-do__item">
+                        <button class="to-do__button" onclick=todoAlls()>All</button>
+                    </li>
+                    <li class="to-do__item">
+                        <button class="to-do__button" onclick=todoActive()>Active</button>
+                    </li>
+                    <li class="to-do__item">
+                        <button class="to-do__button" onclick=todoCompleted()>Complete</button>
+                    </li>
+                </ul>
+            </div>
+            <ul class="todo__list" id="todoList">
+                <li class="todo__item"></li>
+            </ul>
+        </div>
+    </main>
+    <footer class="footer">
+        <button onclick=clickButton()>Кликни и появится футер</button>
+    </footer>
+</div>
+</body>
+</html>
+<script src="./index.js"></script>
