@@ -1,11 +1,10 @@
-
 let todoItems = [];
 let todoInput = document.getElementById("todoListInput");
 let todoAmount = 0;
 
 function todoTasks () {
     let todoValue = document.getElementById("todoListInput").value;
-    todoItems.push({
+    todoItems.push({  // функция push добавляет в массив данные
         id: todoAmount,
         text: todoValue,
         status: true,
@@ -21,8 +20,7 @@ function todoShowTasks () {
           `
             <li class="todo-list__item">
                <div class="todo__block">
-                   ${todoItems[i].status ? `${todoItems[i].text}` : `<del>${todoItems[i].text}</del>`}
-                   <button class="todo__button" onclick=todoStatus(${i})>вычеркнуть</button>
+                   <p class="todo__button" onclick=todoStatus(${i})>${todoItems[i].status ? `${todoItems[i].text}` : `<del>${todoItems[i].text}</del>`}</p>
                    <button class="todo__button" onclick=todoDelete(${i})>Удалить</button>
                </div>
             </li>
@@ -43,16 +41,4 @@ function todoStatus (index) {
 function todoDelete (index) {
     todoItems = todoItems.filter(i => i.id !== todoItems[index].id)
     todoShowTasks()
-}
-
-function todoAll () {
-    todo
-}
-
-function todoActive () {
-
-}
-
-function todoCompleted () {
-
 }
