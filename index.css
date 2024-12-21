@@ -1,15 +1,12 @@
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   backface-visibility: hidden;
   margin: 0;
   padding: 0;
-}
-
-.body {
 }
 
 .body__container {
@@ -46,12 +43,6 @@
   justify-content: space-between;
 }
 
-.main {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  height: 100%;
-  align-self: start;
-  width: 100%;
-  align-items: center;
+a {
+  text-decoration: none;
 }
