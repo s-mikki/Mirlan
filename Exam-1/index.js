@@ -87,12 +87,12 @@ function todoTasks() {
 }
 
 function todoStatus(index) {
-  todoItems[index].status = !todoItems[index].status; // Переключение статуса
+  todoItems[index].status = !todoItems[index].status;
   todoTasks();
 }
 
 function todoDelete(index) {
-  todoItems.splice(index, 1); // Удаляем элемент по индексу
+  todoItems.splice(index, 1);
   todoTasks();
 }
 
