@@ -1,82 +1,85 @@
 let contacts = [
     {
         id: 1,
-        name: 'spider man',
+        name: 'Iron Man',
         photo:'./img/vote-bg-1.jpg',
-        phone:'+996505688852'
-
+        phone:'+1 202-555-0173' // США
     },
     {
         id: 2,
-        name: 'spider man 1',
+        name: 'Captain America',
         photo:'./img/vote-bg-1.jpg',
-        phone:'+996505688852'
+        phone:'+44 20 7946 0958' // Великобритания
     },
     {
         id: 3,
-        name: 'spider man',
+        name: 'Thor',
         photo:'./img/vote-bg-1.jpg',
-        phone:'+996505688852'
+        phone:'+996 555 123 456' // Кыргызстан
     },
     {
         id: 4,
-        name: 'spider man',
+        name: 'Hulk',
         photo:'./img/vote-bg-1.jpg',
-        phone:'+996505688852'
+        phone:'+91 98765 43210' // Индия
     },
     {
         id: 5,
-        name: 'spider man',
+        name: 'Black Widow',
         photo:'./img/vote-bg-1.jpg',
-        phone:'+996505688852'
+        phone:'+33 1 23 45 67 89' // Франция
     },
     {
         id: 6,
-        name: 'spider man',
+        name: 'Hawkeye',
         photo:'./img/vote-bg-1.jpg',
-        phone:'+996505688852'
+        phone:'+81 90-1234-5678' // Япония
     },
     {
         id: 7,
-        name: 'spider man',
+        name: 'Doctor Strange',
         photo:'./img/vote-bg-1.jpg',
-        phone:'+996505688852'
+        phone:'+49 151 23456789' // Германия
     },
     {
         id: 8,
-        name: 'spider man',
+        name: 'Scarlet Witch',
         photo:'./img/vote-bg-1.jpg',
-        phone:'+996505688852'
+        phone:'+86 138 00138000' // Китай
     },
     {
         id: 9,
-        name: 'spider man',
+        name: 'Black Panther',
         photo:'./img/vote-bg-1.jpg',
-        phone:'+996505688852'
+        phone:'+27 82 123 4567' // Южная Африка
     },
     {
         id: 10,
-        name: 'spider man',
+        name: 'Spider-Man',
         photo:'./img/vote-bg-1.jpg',
-        phone:'+996505688852'
+        phone:'+7 495 123-45-67' // Россия
     },
     {
         id: 11,
-        name: 'spider man',
+        name: 'Ant-Man',
         photo:'./img/vote-bg-1.jpg',
-        phone:'+996505688852'
+        phone:'+61 400 123 456' // Австралия
     },
     {
         id: 12,
-        name: 'spider man',
+        name: 'Captain Marvel',
         photo:'./img/vote-bg-1.jpg',
-        phone:'+996505688852'
+        phone:'+34 600 123 456' // Испания
     },
-]
+];
+
 
 function contactFilter () {
-    let filter = document.getElementById('contactInput').value;
-    let data = contacts.filter((i)=>i.name.phone.toLowerCase().includes(filter.toLowerCase()));
+    let filter = document.getElementById('contactInput').value.toLowerCase();
+    let data = contacts.filter((i)=>
+      i.name.toLowerCase().includes(filter) ||
+      i.phone.toLowerCase().includes(filter)
+    );
     if(data.length > 0) {
         let text = '';
         data.forEach(item => {
@@ -95,5 +98,8 @@ function contactFilter () {
                 </li>
     `
         })
+        document.getElementById('contactResult').innerHTML = text;
+    }else {
+        document.getElementById('contactResult').innerHTML = "()^()";
     }
 }
