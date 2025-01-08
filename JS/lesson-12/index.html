@@ -4,21 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../index.css">
 </head>
 <body class="body">
 <div class="body__container">
     <header class="header"></header>
     <main class="main">
-        <div class="contact">
-            <label class="contact__label">
-                <input type="search" class="contact__input" placeholder="search" id="contactInput" oninput=contactFilter()>
-            </label>
-            <ul class="contact__list" id="contactResult">
-
-            </ul>
-        </div>
+        <input type="text" id="filterInput" oninput="filter()">
+        <div class="category" id="categoryResult"></div>
     </main>
     <footer class="footer">
         <button onclick=clickButton()>Кликни и появится футер</button>
@@ -26,4 +20,4 @@
 </div>
 </body>
 </html>
-<script src="./index.js"></script>
+<script src="index.js"></script>
