@@ -1,0 +1,54 @@
+.main {
+  background-color: white !important;
+}
+
+.line {
+  border-bottom: 1px dotted black;
+  width: 100%;
+  margin: auto;
+  position: relative;
+}
+
+.line__img {
+  position: absolute;
+  width: 300px;
+  height: 100px;
+  bottom: 0;
+}
+
+.line__block {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  bottom: 0;
+  right: 120px;
+}
+
+.line__circle {
+  border-radius: 50%;
+  border: 1px solid black;
+  width: 30px;
+  height: 30px;
+}
+
+.line__pipe {
+  width: 4px;
+  height: 140px;
+  background-color: black;
+  margin: -5px 0 0 0;
+}
+
+.line__circle--green {
+
+}
+
+.line__circle--yellow {
+
+}
+
+.line__circle--red {
+
+}
+

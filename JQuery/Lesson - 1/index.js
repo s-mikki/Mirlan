@@ -53,64 +53,64 @@ function time5() {
 setTimeout(time5, 4500)
 
 
-function floor() {
-    let floor = document.getElementById('floorInput').value;
-
-    document.getElementById('floorAnswer').innerHTML = '';
-
-    if (floor === '1') {
-        $('.floor__item--active').animate({
-            bottom: '0px'
-        })
-    }
-    if (floor === '2') {
-        $('.floor__item--active').animate({
-            bottom: '20px'
-        })
-    }
-    if (floor === '3') {
-        $('.floor__item--active').animate({
-            bottom: '40px'
-        })
-    }
-    if (floor === '4') {
-        $('.floor__item--active').animate({
-            bottom: '60px'
-        })
-    }
-    if (floor === '5') {
-        $('.floor__item--active').animate({
-            bottom: '80px'
-        })
-    }
-    if (floor === '6') {
-        $('.floor__item--active').animate({
-            bottom: '100px'
-        })
-    }
-    if (floor === '7') {
-        $('.floor__item--active').animate({
-            bottom: '120px'
-        })
-    }
-    if (floor === '8') {
-        $('.floor__item--active').animate({
-            bottom: '140px'
-        })
-    }
-    if (floor === '9') {
-        $('.floor__item--active').animate({
-            bottom: '160px'
-        })
-    }
-    if (floor === '10') {
-        $('.floor__item--active').animate({
-            bottom: '180px'
-        })
-    }else {
-        document.getElementById('floorAnswer').innerHTML = 'Ничего нет';
-    }
-}
+// function floor() {
+//     let floor = document.getElementById('floorInput').value;
+//
+//     document.getElementById('floorAnswer').innerHTML = '';
+//
+//     if (floor === '1') {
+//         $('.floor__item--active').animate({
+//             bottom: '0px'
+//         })
+//     }
+//     if (floor === '2') {
+//         $('.floor__item--active').animate({
+//             bottom: '20px'
+//         })
+//     }
+//     if (floor === '3') {
+//         $('.floor__item--active').animate({
+//             bottom: '40px'
+//         })
+//     }
+//     if (floor === '4') {
+//         $('.floor__item--active').animate({
+//             bottom: '60px'
+//         })
+//     }
+//     if (floor === '5') {
+//         $('.floor__item--active').animate({
+//             bottom: '80px'
+//         })
+//     }
+//     if (floor === '6') {
+//         $('.floor__item--active').animate({
+//             bottom: '100px'
+//         })
+//     }
+//     if (floor === '7') {
+//         $('.floor__item--active').animate({
+//             bottom: '120px'
+//         })
+//     }
+//     if (floor === '8') {
+//         $('.floor__item--active').animate({
+//             bottom: '140px'
+//         })
+//     }
+//     if (floor === '9') {
+//         $('.floor__item--active').animate({
+//             bottom: '160px'
+//         })
+//     }
+//     if (floor === '10') {
+//         $('.floor__item--active').animate({
+//             bottom: '180px'
+//         })
+//     }else {
+//         document.getElementById('floorAnswer').innerHTML = 'Ничего нет';
+//     }
+// }
 
 function draw() {
     let position = {
