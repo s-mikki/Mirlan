@@ -1,0 +1,52 @@
+.propeller {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  gap: 10px;
+}
+
+.propeller__plus {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: aliceblue;
+  border-radius: 100%;
+  z-index: 1;
+}
+
+.propeller__plus svg {
+  width: 40px;
+  height: 40px;
+}
+
+.propeller__content {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+}
+
+.propeller__img {
+
+}
+
+.propeller__circle {
+  display: flex;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  background-color: red;
+  margin: 0 0 -35px 0;
+}
+
+.propeller__pillar {
+  width: 40px;
+  background-color: paleturquoise;
+  height: 600px;
+  border-radius: 20px;
+}
+
