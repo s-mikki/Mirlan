@@ -41,6 +41,7 @@
   padding: 50px;
   height: 100vh;
   justify-content: space-between;
+  position: relative;
 }
 
 a {
